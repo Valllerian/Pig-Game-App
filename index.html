@@ -9,40 +9,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="parent">
-      <div class="child">
-        <section>
-            <button>NEW GAME</button>
-          </section>
-          <section class="row">
-            <div class="column">
-              <div class="card card-active">
-                <div class="player">PLAYER 1</div>
-                <div class="score">SCORE:</div>
-                <div class="current">
-                    CURRENT
-                  <div class="number">0</div>
-                </div>
-              </div>
+    <div class="child">
+      <section class="button">
+        <button class="pushable"><span class="front">NEW GAME</span></button>
+      </section>
+      <section class="row">
+        <div class="column">
+          <div class="card card-active">
+            <div class="player">PLAYER 1</div>
+            <div class="score">SCORE:</div>
+            <div class="current">
+              CURRENT
+              <div class="number">0</div>
             </div>
-            <div class="column ">
-              <div class="card card-waiting">
-                <div class="player">PLAYER 2</div>
-                <div class="score">SCORE:</div>
-                <div class="current">
-                    CURRENT
-                  <div class="number">0</div>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card card-waiting">
+            <div class="player">PLAYER 2</div>
+            <div class="score">SCORE:</div>
+            <div class="current">
+              CURRENT
+              <div class="number">0</div>
             </div>
-          </section>
-          <section>
-            <div>
-              <button>ROLL DICE</button>
-              <button>HOLD</button>
-            </div>
-          </section>
+          </div>
+        </div>
+      </section>
+      <div class="buttonTwo">
+        <button class="pushable"><span class="front">ROLL DICE</span></button>
       </div>
-   
+      <div class="buttonThree">
+        <button class="pushable"><span class="front">HOLD</span></button>
+      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
