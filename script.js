@@ -3,7 +3,7 @@ const newGameButton = document.getElementById("newGame")
 newGameButton.addEventListener("click", newGameFunction);
 
 function newGameFunction() {
-    console.log('New Game button')
+    window.location.reload()
 }
 
 const rollDiceButton = document.getElementById("rollDice")
@@ -19,7 +19,7 @@ function rollDiceFunction() {
         document.getElementById("dice").innerHTML=`<img src='assets/${number}.jpg' height=125px width=125px/>`;
         if(number === 0){
             document.getElementById("playerOneCurrent").innerHTML = 0;
-            playerOneTurn = false;
+            return playerOneTurn = false;
         }else{
             document.getElementById("playerOneCurrent").innerHTML = playerOneCurrent + (number + 1)
         }
@@ -29,14 +29,11 @@ function rollDiceFunction() {
             document.getElementById("dice").innerHTML=`<img src='assets/${number}.jpg' height=125px width=125px/>`;
             if(number === 0){
                 document.getElementById("playerTwoCurrent").innerHTML = 0;
-                playerOneTurn = true;
+                return playerOneTurn = true;
             }else{
                 document.getElementById("playerTwoCurrent").innerHTML = playerOneCurrent + (number + 1)
         } 
     }
-    
-
-    
 }
 
 const holdButton = document.getElementById("hold")
@@ -50,6 +47,11 @@ function holdFunction() {
         playerOneScore = playerOneScore + playerOneCurrent;
         document.getElementById("playerOneScore").innerHTML = playerOneScore;
         document.getElementById("playerOneCurrent").innerHTML = 0;
+        if(Number(document.getElementById("playerOneScore").innerHTML >= 100)){
+            document.getElementById("rollDice").disabled = true;
+            document.getElementById("hold").disabled = true;
+            console.log("Player One Wins!")
+        }
         return playerOneTurn = false;
     }
     if(!playerOneTurn){
@@ -58,8 +60,14 @@ function holdFunction() {
         playerTwoScore = playerTwoScore + playerTwoCurrent;
         document.getElementById("playerTwoScore").innerHTML = playerTwoScore;
         document.getElementById("playerTwoCurrent").innerHTML = 0;
+        if(Number(document.getElementById("playerTwoScore").innerHTML >= 100)){
+            document.getElementById("rollDice").disabled = true;
+            document.getElementById("hold").disabled = true;
+            console.log("Player Two Wins!")
+        }
         return playerOneTurn = true;
     }
+
     }
     
 
