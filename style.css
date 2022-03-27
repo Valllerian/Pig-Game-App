@@ -151,3 +151,9 @@ body {
 .pushable:active .front {
     transform: translateY(-2px);
 }
+
+.winner{
+    color: #56f3eb;
+    font-weight: bold;
+    opacity:100%;
+}
