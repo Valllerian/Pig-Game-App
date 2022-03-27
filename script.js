@@ -76,8 +76,8 @@ function holdFunction() {
     if (Number(document.getElementById("playerOneScore").innerHTML >= 100)) {
       document.getElementById("rollDice").disabled = true;
       document.getElementById("hold").disabled = true;
-      document.getElementById("playerOneScore").classList.add('winner')
-      document.getElementById("playerOneScore").innerHTML = "WINNER!"
+      document.getElementById("playerOneScore").classList.add("winner");
+      document.getElementById("playerOneScore").innerHTML = "WINNER!";
     }
     let playerOne = document.getElementById("playerOne");
     let playerTwo = document.getElementById("playerTwo");
@@ -100,8 +100,8 @@ function holdFunction() {
     if (Number(document.getElementById("playerTwoScore").innerHTML >= 100)) {
       document.getElementById("rollDice").disabled = true;
       document.getElementById("hold").disabled = true;
-      document.getElementById("playerTwoScore").classList.add('winner')
-      document.getElementById("playerTwoScore").innerHTML = "WINNER!"
+      document.getElementById("playerTwoScore").classList.add("winner");
+      document.getElementById("playerTwoScore").innerHTML = "WINNER!";
     }
     let playerOne = document.getElementById("playerOne");
     let playerTwo = document.getElementById("playerTwo");

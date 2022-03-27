@@ -59,11 +59,11 @@ body {
     color: white;
 }
 
-.card-border-one{
+.card-border-one {
     border-radius: 20px 0px 0px 20px;
 }
 
-.card-border-two{
+.card-border-two {
     border-radius: 0px 20px 20px 0px;
 }
 
@@ -152,8 +152,8 @@ body {
     transform: translateY(-2px);
 }
 
-.winner{
+.winner {
     color: #56f3eb;
     font-weight: bold;
-    opacity:100%;
+    opacity: 100%;
 }
