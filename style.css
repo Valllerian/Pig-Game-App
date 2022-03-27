@@ -99,6 +99,14 @@ body {
     left: 39.5%
 }
 
+.image {
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 41.5%;
+    opacity: 80%;
+}
+
 .buttonTwo {
     position: absolute;
     z-index: 1;

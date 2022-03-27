@@ -11,7 +11,8 @@ const rollDiceButton = document.getElementById("rollDice")
 rollDiceButton.addEventListener("click", rollDiceFunction);
 
 function rollDiceFunction() {
-    console.log('Roll Dice button')
+    let number = Math.floor(Math.random() * 5)
+    document.getElementById("dice").innerHTML=`<img src='assets/${number}.jpg' height=125px width=125px/>`;
 }
 
 const holdButton = document.getElementById("hold")
