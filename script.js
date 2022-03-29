@@ -2,6 +2,8 @@ const newGameButton = document.getElementById("newGame");
 
 newGameButton.addEventListener("click", newGameFunction);
 
+// New game function simply reloads the page to clear all values;
+
 function newGameFunction() {
   window.location.reload();
 }
@@ -11,6 +13,9 @@ const rollDiceButton = document.getElementById("rollDice");
 rollDiceButton.addEventListener("click", rollDiceFunction);
 
 let playerOneTurn = true;
+
+// Roll Dice function rolls dice first and then depending on who`s turn it is modifies the current score value;
+// If 1 is rolled - current value is set as 0 and turn is ended; If not - currents is a sum of last current + roll value;
 
 function rollDiceFunction() {
   let number = Math.floor(Math.random() * 5);
@@ -61,6 +66,8 @@ function rollDiceFunction() {
 const holdButton = document.getElementById("hold");
 
 holdButton.addEventListener("click", holdFunction);
+
+// Hold button function lets the player and their turn and hold(store) their current points and transfer them to the total;
 
 function holdFunction() {
   if (playerOneTurn) {
